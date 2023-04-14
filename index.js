@@ -5,7 +5,7 @@ import authRoute from "./routes/auth.js";
 import usersRoute from "./routes/users.js";
 import hotelsRoute from "./routes/hotels.js";
 import roomsRoute from "./routes/rooms.js";
-
+import cookieParser from "cookie-parser";
 dotenv.config()
 
 const app = express();
@@ -13,7 +13,7 @@ const PORT = 4000;
 
 const connect = async ()=>{
     try{
-        await mongoose.connect(process.env.MONGO_URL);
+        await mongoose.connect("mongodb+srv://Gopi2301:Gopi123@cluster0.qoaszln.mongodb.net");
         console.log("Connected to MongoDB")
     } catch (error){
         throw error;
@@ -21,7 +21,7 @@ const connect = async ()=>{
 };
 
 // middlewares 
-
+app.use(cookieParser());
 app.use(express.json())
 app.use("/api/auth", authRoute);
 app.use("/api/users", usersRoute);

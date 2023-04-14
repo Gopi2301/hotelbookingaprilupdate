@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "../routes"
+		},
+		{
+			"path": "../.git"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../models"
+		},
+		{
+			"path": "../node_modules"
+		}
+	]
+}
